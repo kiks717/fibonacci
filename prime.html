@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(n){
+            if(n < 2){
+                return false
+            //ako proslijedimo 0,1 ili bilo koji negativan broj
+            //vrati false
+            }
+            //ako je n vece od 1 da li je djeljiv sa manjim brojem
+            //porediti do n
+            for(let i = 2; i < n; i++){
+                //pri svakoj iteraciji da li je djeljiv sa i
+                if(n%i === 0){
+                    return false
+                }
+            }
+            //ako je petlja dosla do kraja i nema djelivih brojeva 
+            //sa n i prost je vrati true
+            return true
+        }
+        console.log(isPrime(4))
+        console.log(isPrime(5))
+        console.log(isPrime(1))
+
+    </script>
+</body>
+</html>
