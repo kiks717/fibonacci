@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inerFibonacci{
+            font-size: 1.2rem;
+            border: 1px solid black;
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0;
+        }
+        li{
+            border: 1px solid #dda120;
+            width: 80%;
+            padding: 1rem;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="inerFibonacci">
+        <h2>Fibonacci Array [100]</h2>
+    </div>
+    <script>
+    const fibo = document.getElementById('inerFibonacci')
+
+    function fibonacci(n) {
+     // prva dva broja su uvijek 0 i 1
+     const fib = [0,1]
+     //sledece je napraviti funkciju koja racuna sumu prethodna dva broja, for loop
+     for(let i =2; i < 101; i++){
+ 
+              //ovdje se dodaje prvi i drugi broj 
+         fib[i] = fib[i - 1] + fib[i - 2]
+ 
+     //ako je n = 3, fib od 3 bi bio fib od 2 + fib od 1 
+     //fib od 2 bi bio, fib od 1  + fib od 0 
+     }
+
+    fib.forEach(function(item) {
+        let li = document.createElement('li')
+        li.innerText = "F = " + item
+        fibo.append(li)
+        
+    })
+         //vracamo cijeli ispunjeni niz 
+         return fib
+     } 
+
+
+fibonacci()
+
+    </script>
+</body>
+</html>
