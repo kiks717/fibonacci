@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    <h4 id="h4"></h4>
+
+    <script>
+        function factorial(n){
+            // if(n ==0 ){
+            //     return 1
+            // }
+            // else{
+            //     return factorial(n-1) * n
+            // }
+            let result = 1
+            for(let i = 2; i <= n; i++){
+                //pri svakoj iteraciji mnozimo trenutni rezultat sa i 
+                result = result * i
+
+                //ako je n5 loop ce pasti na 1 i 2, a 2 u 3, 3 u 4, 4 u 5
+            }
+            return result
+            //kada zavrsi vrati result 
+        }
+        document.getElementById('h4').innerText = `
+        factorial of 3: ${ factorial(3)}
+        factorial of 2: ${factorial(2)}
+        factorial of 1:  ${factorial(1)} 
+        factorial of 10:  ${factorial(10)} 
+        factorial of 7:  ${factorial(7)} 
+
+    `
+
+    // document.write(factorial(10))
+    //big O 
+    /* Calculation not dependent on input size  - O(1)
+        1 loop - O(n) linear O[n]
+        2 nested loop - O(n^2)
+        Input size reduced by half - O(logn)
+    */
+
+    </script>
+</body>
+</html>

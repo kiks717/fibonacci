@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Palindrom Function</h2>
+        <h4 id="h4"></h4>
+    </div>
+    <script >
+        const checkPalindrome=(str)=> {
+        return str.toLowerCase().trim() === 
+        str.toLowerCase().trim().split('').reverse().join('');
+  }
+  //reverse string
+//   function reverseString(str){
+//     let reveresed = str.split('').reverse().join("")
+//     console.log(reversed)
+//   }
+
+  console.log(checkPalindrome("Level "))
+  checkPalindrome("race ")
+  checkPalindrome("RaceCar ")
+    document.getElementById('h4').innerText = `
+       is palindrom: ${checkPalindrome('level')}
+       is palindrom: ${checkPalindrome("race ")}
+       is palindrom:  ${checkPalindrome("RaceCar ")} 
+    `
+    </script>
+</body>
+</html>

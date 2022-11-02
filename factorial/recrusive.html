@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // <!-- faktorijal se racuna tako sto se mnozi
+        // od datog broja   unazad sve do 1  -->
+        //postupno ispisivanje 
+    function fact(n) {
+        let result = 1
+        let num = n
+        let text = ""
+        text += n + "! = "
+        for(let i = 0; i < num; num--){
+            //prvo 5*4*3*2*1 =?
+            if(num != 1){
+                //ako je n razlicito od 1,
+                //kada dodje do 1 ide = 
+            text += num + "*"
+            } else {
+                text += num + ' = '
+            }
+            result *= num
+        }
+        document.write(text + result + "<br/>")
+    }
+    fact(10)
+    fact(5)
+    fact(7)
+    </script>
+</body>
+</html>
